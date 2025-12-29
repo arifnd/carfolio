@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreignId('fuel_id');
             $table->foreignId('transmission_id');
             $table->foreignId('type_id');
+            $table->decimal('price', total: 18, places: 0);
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }
