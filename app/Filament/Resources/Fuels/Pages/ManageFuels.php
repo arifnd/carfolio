@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Fuels\Pages;
 use App\Filament\Resources\Fuels\FuelResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
+use Filament\Support\Enums\Width;
 
 class ManageFuels extends ManageRecords
 {
@@ -13,7 +14,8 @@ class ManageFuels extends ManageRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+                ->modalWidth(Width::Medium),
         ];
     }
 }

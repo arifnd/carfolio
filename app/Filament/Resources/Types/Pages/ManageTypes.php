@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Types\Pages;
 use App\Filament\Resources\Types\TypeResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
+use Filament\Support\Enums\Width;
 
 class ManageTypes extends ManageRecords
 {
@@ -13,7 +14,8 @@ class ManageTypes extends ManageRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+                ->modalWidth(Width::Medium),
         ];
     }
 }

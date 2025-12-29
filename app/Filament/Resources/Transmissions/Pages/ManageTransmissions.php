@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Transmissions\Pages;
 use App\Filament\Resources\Transmissions\TransmissionResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
+use Filament\Support\Enums\Width;
 
 class ManageTransmissions extends ManageRecords
 {
@@ -13,7 +14,8 @@ class ManageTransmissions extends ManageRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+                ->modalWidth(Width::Medium),
         ];
     }
 }
