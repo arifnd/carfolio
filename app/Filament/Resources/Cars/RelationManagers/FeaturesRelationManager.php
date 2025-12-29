@@ -3,10 +3,12 @@
 namespace App\Filament\Resources\Cars\RelationManagers;
 
 use Filament\Actions\CreateAction;
+use Filament\Actions\DeleteAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Schemas\Schema;
 use Filament\Support\Enums\Width;
+use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -15,6 +17,8 @@ class FeaturesRelationManager extends RelationManager
     protected static string $relationship = 'features';
 
     protected static ?string $modelLabel = 'fitur';
+
+    protected static ?string $title = 'Fitur';
 
     public function form(Schema $schema): Schema
     {
@@ -35,8 +39,13 @@ class FeaturesRelationManager extends RelationManager
                     ->modalWidth(Width::Medium),
             ])
             ->columns([
-                TextColumn::make('name')
-                    ->label('Nama'),
+                Split::make([
+                    TextColumn::make('name')
+                        ->label('Nama'),
+                ]),
+            ])
+            ->recordActions([
+                DeleteAction::make(),
             ]);
     }
 
