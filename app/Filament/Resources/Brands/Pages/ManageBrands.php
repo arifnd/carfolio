@@ -6,6 +6,7 @@ use App\Filament\Resources\Brands\BrandResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
 use Filament\Support\Enums\Width;
+use Filament\Support\Icons\Heroicon;
 
 class ManageBrands extends ManageRecords
 {
@@ -15,7 +16,8 @@ class ManageBrands extends ManageRecords
     {
         return [
             CreateAction::make()
-                ->modalWidth(Width::Medium),
+                ->modalWidth(Width::Medium)
+                ->icon(Heroicon::PlusCircle),
         ];
     }
 }

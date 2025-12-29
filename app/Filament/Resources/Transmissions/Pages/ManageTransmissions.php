@@ -6,6 +6,7 @@ use App\Filament\Resources\Transmissions\TransmissionResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
 use Filament\Support\Enums\Width;
+use Filament\Support\Icons\Heroicon;
 
 class ManageTransmissions extends ManageRecords
 {
@@ -15,7 +16,8 @@ class ManageTransmissions extends ManageRecords
     {
         return [
             CreateAction::make()
-                ->modalWidth(Width::Medium),
+                ->modalWidth(Width::Medium)
+                ->icon(Heroicon::PlusCircle),
         ];
     }
 }
