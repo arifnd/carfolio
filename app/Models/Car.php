@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Car extends Model
 {
@@ -43,10 +44,18 @@ class Car extends Model
     }
 
     /**
-     * Get the fuel that owns the car.
+     * Get the transmission that owns the car.
      */
     public function transmission(): BelongsTo
     {
         return $this->belongsTo(Transmission::class);
+    }
+
+    /**
+     * Get the features for the car.
+     */
+    public function features(): HasMany
+    {
+        return $this->hasMany(CarFeature::class);
     }
 }
