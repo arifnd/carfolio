@@ -23,7 +23,7 @@ class TransmissionResource extends Resource
 
     protected static ?string $modelLabel = 'transmisi';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Cog6Tooth;
 
     protected static ?int $navigationSort = 5;
 

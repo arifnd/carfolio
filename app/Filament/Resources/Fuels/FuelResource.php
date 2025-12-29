@@ -23,7 +23,7 @@ class FuelResource extends Resource
 
     protected static ?string $modelLabel = 'bahan bakar';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFire;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Fire;
 
     protected static ?int $navigationSort = 4;
 

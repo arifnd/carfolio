@@ -23,7 +23,7 @@ class TypeResource extends Resource
 
     protected static ?string $modelLabel = 'tipe';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTag;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Tag;
 
     protected static ?int $navigationSort = 3;
 
