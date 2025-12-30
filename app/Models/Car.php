@@ -58,4 +58,12 @@ class Car extends Model
     {
         return $this->hasMany(CarFeature::class);
     }
+
+    /**
+     * Get the pictures for the car.
+     */
+    public function pictures(): HasMany
+    {
+        return $this->hasMany(CarPicture::class);
+    }
 }

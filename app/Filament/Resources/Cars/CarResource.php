@@ -45,6 +45,7 @@ class CarResource extends Resource
     {
         return [
             RelationManagers\FeaturesRelationManager::class,
+            RelationManagers\PicturesRelationManager::class,
         ];
     }
 
